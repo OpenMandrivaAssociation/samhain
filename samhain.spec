@@ -1,16 +1,14 @@
 %define _localstatedir %{_var}
 
 Name:           samhain
-Version:        2.3.3
+Version:        2.3.4
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPL
 Group:          System/Servers
 URL:            http://www.la-samhna.de/samhain/
-#Source0:       http://www.la-samhna.de/samhain/samhain-current.tar.gz
-Source0:        http://www.la-samhna.de/samhain/samhain-%{version}.tar.gz
-Source1:        http://www.la-samhna.de/samhain/samhain-%{version}.tar.gz.asc
+Source0:       http://www.la-samhna.de/samhain/samhain-current.tar.gz
 Requires(post): lsb-core
 Requires(preun): lsb-core
 Requires(post): rpm-helper
@@ -38,9 +36,11 @@ support for tcp-wrappers and prelude.
 This package does not contain database support.
 
 %prep
-%setup -q -n samhain-%{version}
+%setup -q -c
+%{__tar} xzf samhain-%{version}.tar.gz
 
 %build
+cd samhain-%{version}
 %{serverbuild}
 ./configure \
             --build=%{_target_platform} \
@@ -55,6 +55,7 @@ This package does not contain database support.
 %{make}
 
 %install
+cd samhain-%{version}
 %{__rm} -rf %{buildroot}
 %{__cat} > sstrip << EOF
 #!/bin/sh
@@ -101,8 +102,10 @@ fi
 
 %files
 %defattr(0644,root,root,0755)
-%doc docs/BUGS COPYING docs/Changelog docs/TODO
-%doc LICENSE docs/HOWTO* docs/MANUAL-* docs/README*
+%doc samhain-%{version}/docs/BUGS samhain-%{version}/COPYING
+%doc samhain-%{version}/docs/Changelog samhain-%{version}/docs/TODO
+%doc samhain-%{version}/LICENSE samhain-%{version}/docs/HOWTO*
+%doc samhain-%{version}/docs/MANUAL-* samhain-%{version}/docs/README*
 %attr(0755,root,root) %{_sbindir}/%{name}
 %{_mandir}/man5/samhain*
 %{_mandir}/man8/samhain*
