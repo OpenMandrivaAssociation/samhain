@@ -1,14 +1,14 @@
 %define _localstatedir %{_var}
 
 Name:           samhain
-Version:        2.3.4
+Version:        2.3.5
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPL
 Group:          System/Servers
 URL:            http://www.la-samhna.de/samhain/
-Source0:       http://www.la-samhna.de/samhain/samhain-current.tar.gz
+Source0:        http://www.la-samhna.de/samhain/samhain-current.tar.gz
 Requires(post): lsb-core
 Requires(preun): lsb-core
 Requires(post): rpm-helper
@@ -117,5 +117,3 @@ fi
 %dir %{_localstatedir}/lib/%{name}
 %ghost %{_localstatedir}/lib/%{name}/samhain_file
 %ghost %{_localstatedir}/lib/%{name}/samhain.html
-
-
