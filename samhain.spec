@@ -13,9 +13,12 @@ Requires(post): lsb-core
 Requires(preun): lsb-core
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
+BuildRequires:  libattr-devel
+BuildRequires:  libext2fs-devel
 BuildRequires:  libgmp-devel
 BuildRequires:  libprelude-devel
 BuildRequires:  libwrap-devel
+BuildRequires:  procps
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 
 %description
