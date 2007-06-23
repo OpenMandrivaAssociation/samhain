@@ -2,7 +2,7 @@
 
 Name:           samhain
 Version:        2.3.5
-Release:        %mkrel 1
+Release:        %mkrel 2
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPL
@@ -19,7 +19,7 @@ BuildRequires:  libgmp-devel
 BuildRequires:  libprelude-devel
 BuildRequires:  libwrap-devel
 BuildRequires:  procps
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 samhain is an open source file integrity and host-based intrusion
@@ -41,10 +41,13 @@ This package does not contain database support.
 %prep
 %setup -q -c
 %{__tar} xzf samhain-%{version}.tar.gz
+cd samhain-%{version}
 
 %build
 cd samhain-%{version}
 %{serverbuild}
+# XXX: Wow, these guys are evil, overriding the default configure
+# XXX: args parsing...
 ./configure \
             --build=%{_target_platform} \
             --prefix=%{_prefix} \
@@ -55,11 +58,13 @@ cd samhain-%{version}
             --mandir=%{_mandir} \
             --with-libwrap \
             --with-prelude
-%{make}
+# XXX: parallel make doesn't work since `encode' must exist first
+%{__make}
 
 %install
-cd samhain-%{version}
 %{__rm} -rf %{buildroot}
+
+cd samhain-%{version}
 %{__cat} > sstrip << EOF
 #!/bin/sh
 echo "*** sstrip DISABLED ***"
