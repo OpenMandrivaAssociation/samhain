@@ -1,8 +1,8 @@
 %define _localstatedir %{_var}
 
 Name:           samhain
-Version:        2.3.5
-Release:        %mkrel 2
+Version:        2.3.6
+Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPL
@@ -13,11 +13,11 @@ Requires(post): lsb-core
 Requires(preun): lsb-core
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
-BuildRequires:  libattr-devel
-BuildRequires:  libext2fs-devel
-BuildRequires:  libgmp-devel
-BuildRequires:  libprelude-devel
-BuildRequires:  libwrap-devel
+BuildRequires:  attr-devel
+BuildRequires:  ext2fs-devel
+BuildRequires:  gmp-devel
+BuildRequires:  prelude-devel
+BuildRequires:  wrap-devel
 BuildRequires:  procps
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
