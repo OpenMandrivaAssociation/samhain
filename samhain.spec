@@ -1,7 +1,7 @@
 %define _localstatedir %{_var}
 
 Name:           samhain
-Version:        2.3.6
+Version:        2.3.7
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
