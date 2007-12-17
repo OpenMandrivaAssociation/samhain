@@ -19,7 +19,6 @@ BuildRequires:  gmp-devel
 BuildRequires:  prelude-devel
 BuildRequires:  wrap-devel
 BuildRequires:  procps
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 samhain is an open source file integrity and host-based intrusion
