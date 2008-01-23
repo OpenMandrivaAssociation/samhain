@@ -1,7 +1,7 @@
 %define _localstatedir %{_var}
 
 Name:           samhain
-Version:        2.4.1
+Version:        2.4.2
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
@@ -9,8 +9,8 @@ License:        GPL
 Group:          System/Servers
 URL:            http://www.la-samhna.de/samhain/
 Source0:        http://www.la-samhna.de/samhain/samhain-current.tar.gz
-Requires(post): lsb-core
-Requires(preun): lsb-core
+#Requires(post): lsb-core
+#Requires(preun): lsb-core
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
 BuildRequires:  attr-devel
@@ -101,7 +101,7 @@ if [ "$1" = 1 ]; then
     %create_ghostfile %{_logdir}/%{name}_log root root 0644
     %create_ghostfile %{_localstatedir}/lib/%{name}/samhain_file root root 0644
     %create_ghostfile %{_localstatedir}/lib/%{name}/samhain.html root root 0644
-    %{_sbindir}/samhain -t init
+    %{_sbindir}/samhain -t init >/dev/null 2>&1
 fi
 %_post_service %{name}
 
