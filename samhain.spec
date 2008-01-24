@@ -2,10 +2,10 @@
 
 Name:           samhain
 Version:        2.4.2
-Release:        %mkrel 1
+Release:        %mkrel 2
 Epoch:          0
 Summary:        File integrity and host-based IDS
-License:        GPL
+License:        GPLv2+
 Group:          System/Servers
 URL:            http://www.la-samhna.de/samhain/
 Source0:        http://www.la-samhna.de/samhain/samhain-current.tar.gz
