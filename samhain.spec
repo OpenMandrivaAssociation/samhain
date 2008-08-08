@@ -2,7 +2,7 @@
 
 Name:           samhain
 Version:        2.4.4
-Release:        %mkrel 1
+Release:        %mkrel 2
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPLv2+
