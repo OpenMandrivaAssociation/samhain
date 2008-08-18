@@ -1,8 +1,8 @@
-%define _localstatedir %{_var}
+%define package_version %{version}a
 
 Name:           samhain
-Version:        2.4.4
-Release:        %mkrel 2
+Version:        2.4.5
+Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPLv2+
@@ -40,11 +40,11 @@ This package does not contain database support.
 
 %prep
 %setup -q -c
-%{__tar} xzf samhain-%{version}.tar.gz
-cd samhain-%{version}
+%{__tar} xf samhain-%{package_version}.tar.gz
+cd samhain-%{package_version}
 
 %build
-cd samhain-%{version}
+cd samhain-%{package_version}
 %{serverbuild}
 # XXX: Wow, these guys are evil, overriding the default configure
 # XXX: args parsing...
@@ -64,7 +64,7 @@ cd samhain-%{version}
 %install
 %{__rm} -rf %{buildroot}
 
-cd samhain-%{version}
+cd samhain-%{package_version}
 %{__cat} > sstrip << EOF
 #!/bin/sh
 echo "*** sstrip DISABLED ***"
@@ -110,10 +110,10 @@ fi
 
 %files
 %defattr(0644,root,root,0755)
-%doc samhain-%{version}/docs/BUGS samhain-%{version}/COPYING
-%doc samhain-%{version}/docs/Changelog samhain-%{version}/docs/TODO
-%doc samhain-%{version}/LICENSE samhain-%{version}/docs/HOWTO*
-%doc samhain-%{version}/docs/MANUAL-* samhain-%{version}/docs/README*
+%doc samhain-%{package_version}/docs/BUGS samhain-%{package_version}/COPYING
+%doc samhain-%{package_version}/docs/Changelog samhain-%{package_version}/docs/TODO
+%doc samhain-%{package_version}/LICENSE samhain-%{package_version}/docs/HOWTO*
+%doc samhain-%{package_version}/docs/MANUAL-* samhain-%{package_version}/docs/README*
 %attr(0755,root,root) %{_sbindir}/%{name}
 %{_mandir}/man5/samhain*
 %{_mandir}/man8/samhain*
