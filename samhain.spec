@@ -1,7 +1,7 @@
-%define package_version %{version}a
+%define package_version %{version}
 
 Name:           samhain
-Version:        2.4.5
+Version:        2.4.6
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
@@ -27,7 +27,7 @@ detection system for Linux and Unix. It can run as a daemon process, and
 thus can remember file changes. Contrary to a tool that runs from
 cron, if a file is modified you will get only one report, while
 subsequent checks of that file will ignore the modification as it is
-already reported (unless the file is modified again). 
+already reported (unless the file is modified again).
 
 samhain can optionally be used as client/server system to provide
 centralized monitoring for multiple host. Logging to a (MySQL or
