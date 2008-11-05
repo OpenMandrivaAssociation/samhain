@@ -1,7 +1,7 @@
 %define package_version %{version}
 
 Name:           samhain
-Version:        2.4.6
+Version:        2.5.0
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
@@ -114,6 +114,7 @@ fi
 %doc samhain-%{package_version}/docs/Changelog samhain-%{package_version}/docs/TODO
 %doc samhain-%{package_version}/LICENSE samhain-%{package_version}/docs/HOWTO*
 %doc samhain-%{package_version}/docs/MANUAL-* samhain-%{package_version}/docs/README*
+%doc samhain-%{version}.tar.gz.asc
 %attr(0755,root,root) %{_sbindir}/%{name}
 %{_mandir}/man5/samhain*
 %{_mandir}/man8/samhain*
