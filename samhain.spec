@@ -1,7 +1,7 @@
 %define package_version %{version}
 
 Name:           samhain
-Version:        2.5.0
+Version:        2.5.1
 Release:        %mkrel 1
 Epoch:          0
 Summary:        File integrity and host-based IDS
