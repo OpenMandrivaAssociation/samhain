@@ -2,7 +2,7 @@
 
 Name:           samhain
 Version:        2.5.2b
-Release:        %mkrel 1
+Release:        %mkrel 2
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPLv2+
@@ -46,6 +46,7 @@ cd samhain-%{package_version}
 %build
 cd samhain-%{package_version}
 %{serverbuild}
+%setup_compile_flags
 # XXX: Wow, these guys are evil, overriding the default configure
 # XXX: args parsing...
 ./configure \
