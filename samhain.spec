@@ -127,3 +127,109 @@ fi
 %dir %{_localstatedir}/lib/%{name}
 %ghost %{_localstatedir}/lib/%{name}/samhain_file
 %ghost %{_localstatedir}/lib/%{name}/samhain.html
+
+
+%changelog
+* Sun May 17 2009 Funda Wang <fundawang@mandriva.org> 0:2.5.2b-2mdv2010.0
++ Revision: 376586
+- use configure flags
+
+* Mon Feb 02 2009 Jérôme Soyer <saispo@mandriva.org> 0:2.5.2b-1mdv2009.1
++ Revision: 336529
+- New upstream release
+
+* Mon Jan 12 2009 Jérôme Soyer <saispo@mandriva.org> 0:2.5.1-1mdv2009.1
++ Revision: 328658
+- New upstream release
+
+* Wed Nov 05 2008 David Walluck <walluck@mandriva.org> 0:2.5.0-1mdv2009.1
++ Revision: 300072
+- 2.5.0
+
+* Thu Sep 04 2008 Jérôme Soyer <saispo@mandriva.org> 0:2.4.6-1mdv2009.0
++ Revision: 280660
+- New release
+
+* Tue Aug 19 2008 David Walluck <walluck@mandriva.org> 0:2.4.5-1mdv2009.0
++ Revision: 273495
+- 2.4.5a
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 0:2.4.4-2mdv2009.0
++ Revision: 269240
+- rebuild early 2009.0 package (before pixel changes)
+
+* Tue May 06 2008 David Walluck <walluck@mandriva.org> 0:2.4.4-1mdv2009.0
++ Revision: 201741
+- 2.4.4
+
+* Wed Feb 06 2008 David Walluck <walluck@mandriva.org> 0:2.4.3-1mdv2008.1
++ Revision: 163195
+- 2.4.3
+
+* Thu Jan 24 2008 Funda Wang <fundawang@mandriva.org> 0:2.4.2-2mdv2008.1
++ Revision: 157297
+- rebuild
+
+  + David Walluck <walluck@mandriva.org>
+    - 2.4.2
+    - don't require lsb-core
+    - silence samhain output in %%post
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Tue Nov 27 2007 David Walluck <walluck@mandriva.org> 0:2.4.1-1mdv2008.1
++ Revision: 113292
+- 2.4.1
+
+* Fri Nov 02 2007 David Walluck <walluck@mandriva.org> 0:2.4.0-1mdv2008.1
++ Revision: 104875
+- 2.4.0
+
+* Thu Oct 11 2007 David Walluck <walluck@mandriva.org> 0:2.3.8-1mdv2008.1
++ Revision: 97057
+- 2.3.8
+- 2.3.7
+- 2.3.6
+- fix BuildRequires
+
+* Sat Jun 23 2007 David Walluck <walluck@mandriva.org> 0:2.3.5-2mdv2008.0
++ Revision: 43520
+- disable parallel make
+- add some BuildRequires
+- 2.3.5
+
+* Thu May 03 2007 David Walluck <walluck@mandriva.org> 0:2.3.4-1mdv2008.0
++ Revision: 20828
+- 2.3.4
+
+
+* Wed Apr 04 2007 David Walluck <walluck@mandriva.org> 2.3.3-1mdv2007.1
++ Revision: 150463
+- 2.3.3
+
+* Wed Feb 07 2007 David Walluck <walluck@mandriva.org> 0:2.3.2-1mdv2007.1
++ Revision: 116957
+- 2.3.2
+
+* Thu Jan 25 2007 David Walluck <walluck@mandriva.org> 0:2.3.1-1mdv2007.1
++ Revision: 113072
+- 2.3.1a
+  fix localstatedir by setting it to %%{_var}
+
+* Thu Nov 02 2006 David Walluck <walluck@mandriva.org> 0:2.3.0-1mdv2007.1
++ Revision: 75107
+- 2.3.0a
+
+* Sat Oct 21 2006 David Walluck <walluck@mandriva.org> 0:2.2.5-2mdv2007.0
++ Revision: 71517
+- fix release tag
+- rebuild
+- Import samhain
+
+* Fri Oct 20 2006 David Walluck <walluck@mandriva.org> 0:2.2.5-1
+- release
+
