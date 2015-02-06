@@ -4,7 +4,7 @@
 
 Name:           samhain
 Version:        2.5.2b
-Release:        3
+Release:        4
 Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPLv2+
