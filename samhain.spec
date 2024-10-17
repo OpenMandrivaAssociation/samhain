@@ -9,7 +9,7 @@ Epoch:          0
 Summary:        File integrity and host-based IDS
 License:        GPLv2+
 Group:          System/Servers
-URL:            http://www.la-samhna.de/samhain/
+URL:            https://www.la-samhna.de/samhain/
 Source0:        http://www.la-samhna.de/samhain/samhain-current.tar.gz
 #Requires(post): lsb-core
 #Requires(preun): lsb-core
