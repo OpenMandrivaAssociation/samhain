@@ -15,6 +15,11 @@ Source0:        http://www.la-samhna.de/samhain/samhain-current.tar.gz
 #Requires(preun): lsb-core
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  attr-devel
 BuildRequires:  ext2fs-devel
 BuildRequires:  gmp-devel
